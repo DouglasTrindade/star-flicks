@@ -6,7 +6,7 @@ export const sequelize = new Sequelize({
   port: 5432,
   database: "star_api_development",
   username: "starflicks",
-  password: "123123123",
+  password: "starflicks",
   define: {
     underscored: true,
   },
