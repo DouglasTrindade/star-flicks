@@ -1,4 +1,4 @@
-import { Model, Optional, DataTypes } from "sequelize";
+import { DataTypes, Optional, Model } from "sequelize";
 import { sequelize } from "../database";
 
 export interface Category {
@@ -7,13 +7,13 @@ export interface Category {
   position: number;
 }
 
-export interface CategoryCreationAttributes extends Optional<Category, "id"> {}
+export interface CategoyCreationAttributes extends Optional<Category, "id"> {}
 
-export interface CategoryInstance
-  extends Model<Category, CategoryCreationAttributes>,
+export interface CategoryInstace
+  extends Model<Category, CategoyCreationAttributes>,
     Category {}
 
-export const Category = sequelize.define<CategoryInstance, Category>(
+export const Category = sequelize.define<CategoryInstace, Category>(
   "Category",
   {
     id: {
@@ -28,6 +28,7 @@ export const Category = sequelize.define<CategoryInstance, Category>(
     },
     position: {
       allowNull: false,
+      unique: true,
       type: DataTypes.INTEGER,
     },
   }

@@ -1,7 +1,5 @@
-// src/models/Course.ts
-
-import { sequelize } from "../database";
 import { DataTypes, Model, Optional } from "sequelize";
+import { sequelize } from "../database";
 
 export interface Course {
   id: number;
