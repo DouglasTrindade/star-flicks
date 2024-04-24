@@ -6,7 +6,7 @@ import { adminJsResources } from "./resources";
 
 AdminJS.registerAdapter(AdminJsSequelize);
 
-export const adminjs = new AdminJS({
+export const adminJs = new AdminJS({
   databases: [sequelize],
   rootPath: "/admin",
   resources: adminJsResources,
@@ -33,4 +33,4 @@ export const adminjs = new AdminJS({
   },
 });
 
-export const adminJsRouter = AdminJsExpress.buildRouter(adminjs);
+export const adminJsRouter = AdminJsExpress.buildRouter(adminJs);
